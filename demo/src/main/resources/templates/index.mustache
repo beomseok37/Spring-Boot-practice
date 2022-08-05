@@ -4,6 +4,22 @@
     <div class="row">
         <div class="col-md-6">
             {{#userName}}
+                <table class="table table-horizontal table-bordered">
+                    <thead class="thead-strong">
+                    <tr>
+                        <th>이름</th>
+                        <th>이메일</th>
+                        <th>사진</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{userName}}</td>
+                            <td>{{email}}</td>
+                            <td><img src="{{picture}}" alt="프로필 이미지"/></td>
+                        </tr>
+                    </tbody>
+                </table>
                 Logged in as: <span id="user">{{userName}}</span><a href="/logout" class="btn btn-info active" role="button">Logout</a>
             {{/userName}}
             {{^userName}}
